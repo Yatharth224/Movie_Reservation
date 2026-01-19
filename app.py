@@ -65,3 +65,15 @@ def movies():
         selected_date_str = selected_date.strftime('%Y-%m-%d')
     else:
         selected_date = datetime.strptime(selected_date_str, '%Y-%m-%d').date()
+
+
+    #  Generate Next 4 Days for the Tabs
+    date_tabs = []
+    today = datetime.now().date()
+    for i in range(4):
+        date_obj = today + timedelta(days=i)
+        date_tabs.append({
+            'display': date_obj.strftime('%a, %d %b'), 
+            'value': date_obj.strftime('%Y-%m-%d'),    
+            'active': (date_obj == selected_date)      
+        })
