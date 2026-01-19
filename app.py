@@ -54,3 +54,14 @@ def login():
             return redirect('/movies')
 
     return render_template('login.html')
+
+
+@app.route('/movies')
+def movies():
+    #  Get Selected Date from URL (default to Today)
+    selected_date_str = request.args.get('date')
+    if not selected_date_str:
+        selected_date = datetime.now().date()
+        selected_date_str = selected_date.strftime('%Y-%m-%d')
+    else:
+        selected_date = datetime.strptime(selected_date_str, '%Y-%m-%d').date()
