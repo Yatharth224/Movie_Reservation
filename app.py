@@ -34,3 +34,23 @@ def signup():
         mysql.connection.commit()
         return redirect('/login')
     return render_template('signup.html')
+
+
+
+
+
+@app.route('/login', methods=['GET','POST'])
+def login():
+    if request.method == 'POST':
+        email = request.form['email']
+        password = request.form['password']
+
+        cur = mysql.connection.cursor()
+        cur.execute("SELECT id,password FROM users WHERE email=%s",(email,))
+        user = cur.fetchone()
+
+        if user and bcrypt.check_password_hash(user[1], password):
+            session['user_id'] = user[0]
+            return redirect('/movies')
+
+    return render_template('login.html')
