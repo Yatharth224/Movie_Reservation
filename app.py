@@ -112,3 +112,15 @@ def movies():
         })
 
     return render_template('movies.html', movies=movies_data, date_tabs=date_tabs)
+
+
+
+
+
+@app.route('/lock_seats', methods=['POST'])
+def lock_seats():
+    data = request.json
+    show_id = data['show_id']
+    seats = data['seats']
+
+    cur = mysql.connection.cursor()
