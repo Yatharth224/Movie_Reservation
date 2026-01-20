@@ -77,3 +77,16 @@ def movies():
             'value': date_obj.strftime('%Y-%m-%d'),    
             'active': (date_obj == selected_date)      
         })
+
+    # 3. Fetch Movies
+    cur = mysql.connection.cursor()
+    # Note: 'movies.genre' hata diya hai safety ke liye
+    cur.execute("""
+        SELECT shows.id, movies.title, movies.poster, shows.price, shows.show_time
+        FROM shows
+        JOIN movies ON shows.movie_id = movies.id
+        WHERE DATE(shows.show_time) = %s
+        ORDER BY shows.show_time ASC
+    """, (selected_date_str,))
+    
+    raw_data = cur.fetchall()
