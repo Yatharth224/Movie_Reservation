@@ -124,3 +124,13 @@ def lock_seats():
     seats = data['seats']
 
     cur = mysql.connection.cursor()
+
+    for seat in seats:
+        cur.execute("""
+            UPDATE seats
+            SET status='locked', lock_time=NOW()
+            WHERE show_id=%s AND seat_number=%s AND status='available'
+        """, (show_id, seat))
+
+        if cur.rowcount == 0:
+            return jsonify({"status":"failed"})
