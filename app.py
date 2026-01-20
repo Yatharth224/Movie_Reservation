@@ -90,3 +90,25 @@ def movies():
     """, (selected_date_str,))
     
     raw_data = cur.fetchall()
+
+
+
+    # 4. Process Data
+    movies_data = []
+    for m in raw_data:
+        dt_obj = m[4] 
+        if isinstance(dt_obj, str): 
+            dt_obj = datetime.strptime(dt_obj, '%Y-%m-%d %H:%M:%S')
+            
+        formatted_time = dt_obj.strftime("%I:%M %p") 
+
+        movies_data.append({
+            'show_id': m[0],
+            'title': m[1],
+            'poster': m[2],
+            'genre': 'Blockbuster', 
+            'price': m[3],
+            'time': formatted_time
+        })
+
+    return render_template('movies.html', movies=movies_data, date_tabs=date_tabs)
