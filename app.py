@@ -134,3 +134,10 @@ def lock_seats():
 
         if cur.rowcount == 0:
             return jsonify({"status":"failed"})
+
+
+    mysql.connection.commit()
+    session['locked_seats'] = seats
+    session['show_id'] = show_id
+
+    return jsonify({"status":"ok"})
