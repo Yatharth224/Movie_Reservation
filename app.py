@@ -179,3 +179,10 @@ def seats(show_id):
     
     movie_title = "Unknown"
     show_time_str = ""
+    if show_data:
+        movie_title = show_data[0]
+        # Time ko format karna (e.g. 10:00 PM)
+        dt_obj = show_data[1]
+        if isinstance(dt_obj, str):
+            dt_obj = datetime.strptime(dt_obj, '%Y-%m-%d %H:%M:%S')
+        show_time_str = dt_obj.strftime("%I:%M %p")
