@@ -165,3 +165,17 @@ def seats(show_id):
                     VALUES (%s, %s, 'available', %s, %s)
                 """, (show_id, seat_num, seat_type, price))
         mysql.connection.commit()
+
+
+    # 2. FETCH MOVIE DETAILS (Title & Time) -- YE NAYA HAI
+    cur.execute("""
+        SELECT movies.title, shows.show_time 
+        FROM shows 
+        JOIN movies ON shows.movie_id = movies.id 
+        WHERE shows.id = %s
+    """, (show_id,))
+    
+    show_data = cur.fetchone()
+    
+    movie_title = "Unknown"
+    show_time_str = ""
