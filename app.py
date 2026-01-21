@@ -141,3 +141,13 @@ def lock_seats():
     session['show_id'] = show_id
 
     return jsonify({"status":"ok"})
+
+
+
+@app.route('/seats/<int:show_id>')
+def seats(show_id):
+    cur = mysql.connection.cursor()
+
+    # 1. AUTO-GENERATE CHECK (Smart Logic)
+    cur.execute("SELECT count(*) FROM seats WHERE show_id=%s", (show_id,))
+    count = cur.fetchone()[0]
