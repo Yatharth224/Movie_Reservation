@@ -186,3 +186,10 @@ def seats(show_id):
         if isinstance(dt_obj, str):
             dt_obj = datetime.strptime(dt_obj, '%Y-%m-%d %H:%M:%S')
         show_time_str = dt_obj.strftime("%I:%M %p")
+
+
+    cur.execute("SELECT seat_number, status FROM seats WHERE show_id=%s", (show_id,))
+    seats = cur.fetchall()
+    
+    # Template mein title aur time pass kar rahe hain
+    return render_template('seats.html', seats=seats, show_id=show_id, movie_title=movie_title, show_time=show_time_str)
