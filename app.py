@@ -151,3 +151,17 @@ def seats(show_id):
     # 1. AUTO-GENERATE CHECK (Smart Logic)
     cur.execute("SELECT count(*) FROM seats WHERE show_id=%s", (show_id,))
     count = cur.fetchone()[0]
+
+    if count == 0:
+        rows = ['A', 'B', 'C', 'D', 'E']
+        seats_per_row = 8
+        for r in rows:
+            for n in range(1, seats_per_row + 1):
+                seat_num = f"{r}{n}"
+                seat_type = 'VIP' if r in ['A', 'B'] else 'Standard'
+                price = 500 if seat_type == 'VIP' else 250
+                cur.execute("""
+                    INSERT INTO seats (show_id, seat_number, status, seat_type, price)
+                    VALUES (%s, %s, 'available', %s, %s)
+                """, (show_id, seat_num, seat_type, price))
+        mysql.connection.commit()
