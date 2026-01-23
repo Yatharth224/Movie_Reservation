@@ -228,3 +228,9 @@ def otp():
         show_time = data[1]
         price_per_seat = data[2]
         total_price = len(seats) * price_per_seat
+
+
+    else:
+        movie_title = "Unknown Movie"
+        show_time = ""
+        total_price = 0
