@@ -201,3 +201,10 @@ def seats(show_id):
 def otp():
     if 'locked_seats' not in session or 'show_id' not in session:
         return redirect('/movies')
+    
+    if request.method == 'POST':
+        entered_otp = request.form.get('otp')
+        if entered_otp == str(session.get('otp')):
+            return redirect('/confirm')
+        else:
+            pass 
