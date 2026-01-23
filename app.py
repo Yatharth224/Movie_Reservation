@@ -221,3 +221,10 @@ def otp():
     """, (show_id,))
     
     data = cur.fetchone()
+
+    
+    if data:
+        movie_title = data[0]
+        show_time = data[1]
+        price_per_seat = data[2]
+        total_price = len(seats) * price_per_seat
