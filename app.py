@@ -208,3 +208,16 @@ def otp():
             return redirect('/confirm')
         else:
             pass 
+
+    show_id = session['show_id']
+    seats = session['locked_seats']
+    
+    cur = mysql.connection.cursor()
+    cur.execute("""
+        SELECT movies.title, shows.show_time, shows.price
+        FROM shows
+        JOIN movies ON shows.movie_id = movies.id
+        WHERE shows.id = %s
+    """, (show_id,))
+    
+    data = cur.fetchone()
