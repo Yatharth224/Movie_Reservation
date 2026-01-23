@@ -193,3 +193,11 @@ def seats(show_id):
     
     # Template mein title aur time pass kar rahe hain
     return render_template('seats.html', seats=seats, show_id=show_id, movie_title=movie_title, show_time=show_time_str)
+
+
+
+
+@app.route('/otp', methods=['GET', 'POST'])
+def otp():
+    if 'locked_seats' not in session or 'show_id' not in session:
+        return redirect('/movies')
