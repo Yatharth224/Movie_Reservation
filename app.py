@@ -234,3 +234,8 @@ def otp():
         movie_title = "Unknown Movie"
         show_time = ""
         total_price = 0
+
+     if request.method == 'GET' or 'otp' not in session:
+        new_otp = str(random.randint(100000, 999999))
+        session['otp'] = new_otp
+        print(f"OTP: {new_otp}")
