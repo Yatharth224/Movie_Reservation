@@ -243,4 +243,7 @@ def otp():
     return render_template('otp.html', 
                            movie_title=movie_title,
                            show_time=show_time,
-                           seat_count=len(seats)
+                           seat_count=len(seats),
+                            seats_str=", ".join(seats),
+                           total_price=total_price,
+                           error="Invalid OTP" if request.method == 'POST' else None)
