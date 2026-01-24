@@ -167,7 +167,7 @@ def seats(show_id):
         mysql.connection.commit()
 
 
-    # 2. FETCH MOVIE DETAILS (Title & Time) -- YE NAYA HAI
+    # 2. FETCH MOVIE DETAILS (Title & Time)
     cur.execute("""
         SELECT movies.title, shows.show_time 
         FROM shows 
