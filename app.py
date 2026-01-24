@@ -148,7 +148,7 @@ def lock_seats():
 def seats(show_id):
     cur = mysql.connection.cursor()
 
-    # 1. AUTO-GENERATE CHECK (Smart Logic)
+    # 1. AUTO-GENERATE CHECK 
     cur.execute("SELECT count(*) FROM seats WHERE show_id=%s", (show_id,))
     count = cur.fetchone()[0]
 
@@ -247,3 +247,7 @@ def otp():
                             seats_str=", ".join(seats),
                            total_price=total_price,
                            error="Invalid OTP" if request.method == 'POST' else None)
+
+
+@app.route('/confirm')
+def confirm():
