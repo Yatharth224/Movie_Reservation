@@ -239,3 +239,8 @@ def otp():
         new_otp = str(random.randint(100000, 999999))
         session['otp'] = new_otp
         print(f"OTP: {new_otp}")
+
+    return render_template('otp.html', 
+                           movie_title=movie_title,
+                           show_time=show_time,
+                           seat_count=len(seats)
