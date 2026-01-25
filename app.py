@@ -251,3 +251,9 @@ def otp():
 
 @app.route('/confirm')
 def confirm():
+    seats = ",".join(session['locked_seats'])
+    show_id = session['show_id']
+    user_id = session['user_id']
+    total = len(session['locked_seats']) * 200 
+
+    cur = mysql.connection.cursor()
