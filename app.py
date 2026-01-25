@@ -268,5 +268,5 @@ def confirm():
         SET status='booked'
         WHERE show_id=%s AND seat_number IN %s
     """, (show_id, tuple(session['locked_seats'])))
-     mysql.connection.commit()
+    mysql.connection.commit()
     return redirect('/success')
