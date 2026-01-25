@@ -262,3 +262,9 @@ def confirm():
         INSERT INTO bookings (user_id, show_id, seats, total_price)
         VALUES (%s,%s,%s,%s)
     """, (user_id, show_id, seats, total))
+
+    cur.execute("""
+        UPDATE seats
+        SET status='booked'
+        WHERE show_id=%s AND seat_number IN %s
+    """, (show_id, tuple(session['locked_seats'])))
