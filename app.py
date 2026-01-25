@@ -257,3 +257,8 @@ def confirm():
     total = len(session['locked_seats']) * 200 
 
     cur = mysql.connection.cursor()
+
+    cur.execute("""
+        INSERT INTO bookings (user_id, show_id, seats, total_price)
+        VALUES (%s,%s,%s,%s)
+    """, (user_id, show_id, seats, total))
