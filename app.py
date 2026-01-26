@@ -275,3 +275,10 @@ def confirm():
 @app.route('/success')
 def success():
     return render_template('success.html')
+
+
+
+@app.route('/my-bookings')
+def my_bookings():
+    if 'user_id' not in session:
+        return redirect('/login')
