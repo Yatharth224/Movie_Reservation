@@ -270,3 +270,8 @@ def confirm():
     """, (show_id, tuple(session['locked_seats'])))
     mysql.connection.commit()
     return redirect('/success')
+
+
+@app.route('/success')
+def success():
+    return render_template('success.html')
