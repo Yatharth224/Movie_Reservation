@@ -285,3 +285,12 @@ def my_bookings():
 
 
     cur = mysql.connection.cursor()
+
+    cur.execute("""
+        SELECT movies.title, bookings.created_at, movies.title, shows.show_time, bookings.seats
+        FROM bookings
+        JOIN shows ON bookings.show_id = shows.id
+        JOIN movies ON shows.movie_id = movies.id
+        WHERE bookings.user_id = %s
+        ORDER BY bookings.created_at DESC
+    """, (session['user_id'],))
