@@ -294,3 +294,7 @@ def my_bookings():
         WHERE bookings.user_id = %s
         ORDER BY bookings.created_at DESC
     """, (session['user_id'],))
+
+
+    bookings = cur.fetchall()
+    return render_template('my_bookings.html', bookings=bookings)
