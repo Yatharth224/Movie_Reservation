@@ -282,3 +282,6 @@ def success():
 def my_bookings():
     if 'user_id' not in session:
         return redirect('/login')
+
+
+    cur = mysql.connection.cursor()
