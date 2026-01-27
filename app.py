@@ -298,3 +298,10 @@ def my_bookings():
 
     bookings = cur.fetchall()
     return render_template('my_bookings.html', bookings=bookings)
+
+
+
+@app.route('/release-seats', methods=['POST'])
+def release_seats():
+    show_id = session.get('show_id')
+    seats = session.get('locked_seats')
