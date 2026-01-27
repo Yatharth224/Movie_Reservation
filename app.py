@@ -314,6 +314,13 @@ def release_seats():
         """, (show_id, tuple(seats)))
         mysql.connection.commit()
 
+    session.pop('locked_seats', None)
+    session.pop('show_id', None)
+    session.pop('otp', None)
+
+    return jsonify({"status": "released"})
+
+
     
     
         
