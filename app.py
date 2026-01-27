@@ -235,7 +235,7 @@ def otp():
         show_time = ""
         total_price = 0
 
-     if request.method == 'GET' or 'otp' not in session:
+    if request.method == 'GET' or 'otp' not in session:
         new_otp = str(random.randint(100000, 999999))
         session['otp'] = new_otp
         print(f"OTP: {new_otp}")
@@ -320,5 +320,6 @@ def release_seats():
     session.pop('show_id', None)
     session.pop('otp', None)
     return jsonify({"status": "released"})
+
 
 @app.route('/logout')
