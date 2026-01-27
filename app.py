@@ -319,3 +319,4 @@ def release_seats():
     session.pop('locked_seats', None)
     session.pop('show_id', None)
     session.pop('otp', None)
+    return jsonify({"status": "released"})
