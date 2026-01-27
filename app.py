@@ -303,17 +303,9 @@ def my_bookings():
 
 @app.route('/release-seats', methods=['POST'])
 def release_seats():
-    show_id = session.get('show_id')
-    seats = session.get('locked_seats')
+    
 
-    if show_id and seats:
-        cur = mysql.connection.cursor()
-        cur.execute("""
-            UPDATE seats
-            SET status='available'
-            WHERE show_id=%s AND seat_number IN %s
-        """, (show_id, tuple(seats)))
-        mysql.connection.commit()
+    
 
 
     session.pop('locked_seats', None)
