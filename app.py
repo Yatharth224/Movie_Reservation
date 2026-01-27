@@ -314,3 +314,8 @@ def release_seats():
             WHERE show_id=%s AND seat_number IN %s
         """, (show_id, tuple(seats)))
         mysql.connection.commit()
+
+
+    session.pop('locked_seats', None)
+    session.pop('show_id', None)
+    session.pop('otp', None)
