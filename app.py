@@ -335,3 +335,7 @@ def release_seats():
 def logout():
     session.clear()
     return redirect('/')
+
+
+@app.route('/fix-db')
+def fix_db():
