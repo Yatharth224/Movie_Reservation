@@ -339,3 +339,5 @@ def logout():
 
 @app.route('/fix-db')
 def fix_db():
+    cur = mysql.connection.cursor()
+    try:
