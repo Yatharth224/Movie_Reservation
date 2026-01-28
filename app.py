@@ -341,3 +341,6 @@ def logout():
 def fix_db():
     cur = mysql.connection.cursor()
     try:
+        cur.execute("ALTER TABLE seats ADD COLUMN seat_type VARCHAR(20) DEFAULT 'Standard'")
+        cur.execute("ALTER TABLE seats ADD COLUMN price INT DEFAULT 250")
+        mysql.connection.commit()
