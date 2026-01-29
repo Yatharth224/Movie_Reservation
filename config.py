@@ -1,6 +1,6 @@
 MYSQL_HOST = 'localhost'
-MYSQL_USER = 'yatharth'     # ya root (jo tumne banaya ho)
-MYSQL_PASSWORD = 'Rachit@224'  # jo password diya ho
+MYSQL_USER = 'yatharth'     
+MYSQL_PASSWORD = 'Rachit@224'  
 MYSQL_DB = 'movie_booking'
 
 SECRET_KEY = 'super-secret-key'
