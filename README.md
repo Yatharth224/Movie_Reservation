@@ -16,3 +16,10 @@ Instead of payment, bookings are confirmed using an **OTP (One Time Password)** 
 - Only logged-in users can book seats
 
 ---
+
+### 🎥 Movie Dashboard
+- List of available movies
+- Movie details (show time, venue, seats)
+- Real-time seat availability
+
+---
