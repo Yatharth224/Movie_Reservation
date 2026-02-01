@@ -45,3 +45,10 @@ Instead of payment, bookings are confirmed using an **OTP (One Time Password)** 
 This system is ideal for users who:
 - Avoid online payments
 - Are worried about payment failures
+
+---
+
+### 📖 My Bookings
+- Users can view their **previous bookings**
+- Shows movie name, venue, time, and seat details
+- Booking history is securely stored
