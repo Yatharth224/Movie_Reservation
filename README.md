@@ -70,3 +70,4 @@ This system is ideal for users who:
 - OTP-based seat booking
 - Smart 5-minute seat hold timer
 - Automatic seat release
+- Trust
