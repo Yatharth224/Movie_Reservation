@@ -68,3 +68,4 @@ This system is ideal for users who:
 ## 💡 Why This System Is Unique?
 - No online payment system
 - OTP-based seat booking
+- Smart 5-minute seat hold timer
