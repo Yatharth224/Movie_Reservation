@@ -61,3 +61,10 @@ This system is ideal for users who:
 - If the user does not arrive on time:
  - The seat is **automatically released**
   - This prevents loss for the theatre owner
+
+
+---
+
+## 💡 Why This System Is Unique?
+- No online payment system
+- OTP-based seat booking
