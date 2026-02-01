@@ -34,3 +34,14 @@ Instead of payment, bookings are confirmed using an **OTP (One Time Password)** 
   - The seat is **automatically released**
 
 ✅ Prevents unfair blocking of seats
+
+---
+
+### 🔑 OTP-Based Booking (No Payment Required)
+- ❌ No online payment required
+- ✅ Booking is confirmed using OTP
+- OTP is used as booking verification
+
+This system is ideal for users who:
+- Avoid online payments
+- Are worried about payment failures
