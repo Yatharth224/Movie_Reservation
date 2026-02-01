@@ -59,3 +59,5 @@ This system is ideal for users who:
 ### ⏰ Venue Reporting Rule (30 Minutes)
 - Users must arrive at the venue **30 minutes before the movie start time**
 - If the user does not arrive on time:
+ - The seat is **automatically released**
+  - This prevents loss for the theatre owner
