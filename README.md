@@ -23,3 +23,14 @@ Instead of payment, bookings are confirmed using an **OTP (One Time Password)** 
 - Real-time seat availability
 
 ---
+
+---
+
+### ⏳ Seat Hold System (5 Minutes)
+- When a user selects a seat:
+  - The seat is **held for 5 minutes**
+  - During this time, **no other user can book that seat**
+- If the user does not complete the booking within 5 minutes:
+  - The seat is **automatically released**
+
+✅ Prevents unfair blocking of seats
