@@ -52,3 +52,10 @@ This system is ideal for users who:
 - Users can view their **previous bookings**
 - Shows movie name, venue, time, and seat details
 - Booking history is securely stored
+
+
+---
+
+### ⏰ Venue Reporting Rule (30 Minutes)
+- Users must arrive at the venue **30 minutes before the movie start time**
+- If the user does not arrive on time:
