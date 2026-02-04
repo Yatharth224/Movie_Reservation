@@ -71,3 +71,6 @@ This system is ideal for users who:
 - Smart 5-minute seat hold timer
 - Automatic seat release
 - Trust-based booking experience
+
+## 🛠 Tech Stack (Example)
+- **Frontend:** HTML, CSS, JavaScript
