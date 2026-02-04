@@ -75,3 +75,4 @@ This system is ideal for users who:
 ## 🛠 Tech Stack (Example)
 - **Frontend:** HTML, CSS, JavaScript
 - **Backend:** Python (Flask / Django)
+- **Database:** SQLite / MySQL
