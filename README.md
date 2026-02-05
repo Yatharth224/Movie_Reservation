@@ -76,3 +76,4 @@ This system is ideal for users who:
 - **Frontend:** HTML, CSS, JavaScript
 - **Backend:** Python (Flask)
 - **Database:**  MySQL
+- **Authentication:** Login + OTP system
