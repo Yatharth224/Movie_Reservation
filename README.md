@@ -77,3 +77,6 @@ This system is ideal for users who:
 - **Backend:** Python (Flask)
 - **Database:**  MySQL
 - **Authentication:** Login + OTP system
+
+
+## 🚀 Future Enhancements
