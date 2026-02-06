@@ -82,3 +82,4 @@ This system is ideal for users who:
 ## 🚀 Future Enhancements
 - Admin dashboard
 - SMS / Email OTP support
+- Improved seat selection UI
