@@ -83,3 +83,4 @@ This system is ideal for users who:
 - Admin dashboard
 - SMS / Email OTP support
 - Improved seat selection UI
+- Multiple theatre 
