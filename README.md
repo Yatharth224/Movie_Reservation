@@ -84,3 +84,8 @@ This system is ideal for users who:
 - SMS / Email OTP support
 - Improved seat selection UI
 - Multiple theatre / venue support
+
+
+---
+
+## 📄 License
