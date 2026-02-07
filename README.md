@@ -93,5 +93,5 @@ This project is created for **educational, hackathon, and learning purposes**.
 
 ---
 ## 👨‍💻 Developed By
-**Yatharth Chouhan**  
+**Yatharth Singh Chouhan**  
 Hackathon Project 2025
