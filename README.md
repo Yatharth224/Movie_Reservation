@@ -90,3 +90,5 @@ This system is ideal for users who:
 
 ## 📄 License
 This project is created for **educational, hackathon, and learning purposes**.
+
+---
