@@ -15,4 +15,7 @@ CREATE TABLE movies (
 
 
 -- SHOWS TABLE
-CREATE TABLE shows
+CREATE TABLE shows (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    movie_id INT NOT NULL,
+    show_time DATETIME NOT NULL)
