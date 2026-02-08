@@ -6,3 +6,9 @@ CREATE TABLE users (
     password VARCHAR(255) NOT NULL
 );
 
+-- MOVIES TABLE
+CREATE TABLE movies (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(150) NOT NULL,
+    poster VARCHAR(255)
+);
