@@ -12,3 +12,7 @@ CREATE TABLE movies (
     title VARCHAR(150) NOT NULL,
     poster VARCHAR(255)
 );
+
+
+-- SHOWS TABLE
+CREATE TABLE shows
