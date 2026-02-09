@@ -26,6 +26,7 @@ CREATE TABLE shows (
 -- SEATS TABLE
 CREATE TABLE seats(
     id INT AUTO_INCREMENT PRIMARY KEY,
+    show_id INT NOT NULL,
 
 
 
