@@ -27,6 +27,7 @@ CREATE TABLE shows (
 CREATE TABLE seats(
     id INT AUTO_INCREMENT PRIMARY KEY,
     show_id INT NOT NULL,
+    seat_number VARCHAR(10) NOT NULL
 
 
 
