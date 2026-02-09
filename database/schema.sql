@@ -22,3 +22,8 @@ CREATE TABLE shows (
     price INT NOT NULL,
     FOREIGN KEY (movie_id) REFERENCES movies(id) ON DELETE CASCADE
 );
+
+-- SEATS TABLE
+CREATE TABLE seats(
+    
+)
