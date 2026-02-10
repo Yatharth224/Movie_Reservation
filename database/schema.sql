@@ -33,4 +33,4 @@ CREATE TABLE seats(
     FOREIGN KEY (show_id) REFERENCES shows(id) ON DELETE CASCADE
 
 
-)
+);
