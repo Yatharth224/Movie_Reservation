@@ -30,6 +30,7 @@ CREATE TABLE seats(
     seat_number VARCHAR(10) NOT NULL,
     status ENUM('available','locked','booked') DEFAULT 'available',
     lock_time DATETIME DEFAULT NULL,
+    FOREIGN KEY (show_id) 
 
 
 
