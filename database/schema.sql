@@ -34,3 +34,8 @@ CREATE TABLE seats(
 
 
 );
+
+
+-- BOOKINGS TABLE
+CREATE TABLE bookings (
+    id INT AUTO_INCREMENT PRIMARY KEY)
