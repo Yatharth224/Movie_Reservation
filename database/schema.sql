@@ -40,8 +40,9 @@ CREATE TABLE seats(
 CREATE TABLE bookings (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
-     show_id INT NOT NULL,
-     seats TEXT NOT NULL,
-     total_price INT NOT NULL,
-     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-     FOREIGN KEY (user_id) REFERENCES users(id)
+    show_id INT NOT NULL,
+    seats TEXT NOT NULL,
+    total_price INT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (show_id) REFERENCES shows(id)
