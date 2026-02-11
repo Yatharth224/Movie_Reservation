@@ -39,4 +39,5 @@ CREATE TABLE seats(
 -- BOOKINGS TABLE
 CREATE TABLE bookings (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT NOT NULL,)
+    user_id INT NOT NULL,
+     show_id INT NOT NULL)
