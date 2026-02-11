@@ -47,3 +47,6 @@ CREATE TABLE bookings (
     FOREIGN KEY (user_id) REFERENCES users(id),
     FOREIGN KEY (show_id) REFERENCES shows(id)
 );
+
+
+-- OTP VERIFICATION TABLE
