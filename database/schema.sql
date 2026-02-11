@@ -43,4 +43,5 @@ CREATE TABLE bookings (
      show_id INT NOT NULL,
      seats TEXT NOT NULL,
      total_price INT NOT NULL,
-     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP)
+     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+     FOREIGN KEY (user_id) REFERENCES users(id)
