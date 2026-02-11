@@ -42,4 +42,5 @@ CREATE TABLE bookings (
     user_id INT NOT NULL,
      show_id INT NOT NULL,
      seats TEXT NOT NULL,
-     total_price INT NOT NULL)
+     total_price INT NOT NULL,
+     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP)
