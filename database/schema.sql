@@ -41,4 +41,5 @@ CREATE TABLE bookings (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
      show_id INT NOT NULL,
-     seats TEXT NOT NULL)
+     seats TEXT NOT NULL,
+     total_price INT NOT NULL)
