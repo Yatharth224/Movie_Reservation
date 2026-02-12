@@ -51,6 +51,8 @@ CREATE TABLE bookings (
 
 -- OTP VERIFICATION TABLE
 
-CREATE TABLE otp_verification
+CREATE TABLE otp_verification (
+    
+)
 
 
