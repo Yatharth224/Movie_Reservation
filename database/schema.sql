@@ -52,7 +52,8 @@ CREATE TABLE bookings (
 -- OTP VERIFICATION TABLE
 
 CREATE TABLE otp_verification (
-    
+    id INT AUTO_INCREMENT PRIMARY KEY,
+
 )
 
 
