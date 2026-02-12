@@ -54,6 +54,8 @@ CREATE TABLE bookings (
 CREATE TABLE otp_verification (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
+    otp VARCHAR(6) NOT NULL,
+
     
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
